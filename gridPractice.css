@@ -1,0 +1,57 @@
+body{
+    background-color: white;
+    text-align: center;
+}
+
+#content{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-auto-rows: minmax(200px,auto);
+    max-width: 100%;
+    grid-column-gap: 10px;
+    grid-row-gap:10px;
+    color: white;
+}
+
+#content p{
+    margin: 0;
+    background: black;
+    padding:65px;
+}
+
+#content p:nth-child(even){
+    background: red;
+}
+
+#one{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#two{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+#three{
+    grid-column: 3/4;
+    grid-row:3/4; 
+}
+#four{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+#five{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+#six{
+    grid-column: 3/4;
+    grid-row:2/3;
+}
+#eight{
+    grid-column: 1/2;
+    grid-row:3/4;
+}
+#nine{
+    grid-column: 1/2;
+    grid-row:2/3;
+}

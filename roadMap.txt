@@ -1,0 +1,9 @@
+recursion
+closures
+loops
+conditionals
+Package managers - YARN, Webpack, Babel
+.map
+.filter
+.reduce
+AJAX
