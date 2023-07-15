@@ -52,7 +52,7 @@ router.put('/employees/:id',(req,res)=>{
         gender: req.body.gender
     }
     
-    const index = employees.findIndex((employee) => employee.id === parseInt(employeeID))
+    const index = employees.findIndex((employee) => employee.id === employeeID)
     
     // If the employee exists
     if (index != -1) {
