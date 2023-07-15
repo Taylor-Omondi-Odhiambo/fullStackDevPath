@@ -42,8 +42,8 @@ router.post('/employees',(req,res)=>{
 })
 
 //Put request
-router.put('/employees:id',(req,res)=>{
-    let employeeID = req.params.id
+router.put('/employees/:id',(req,res)=>{
+    const employeeID = parseInt(req.params.id)
     let updateEmployee = {
         id: employeeID,
         fName: req.body.fName,
@@ -52,13 +52,15 @@ router.put('/employees:id',(req,res)=>{
         gender: req.body.gender
     }
     
-    let existingEmployee = employees.find((employee) =>{
-        return employee.id === employeeID
-    })
+    const index = employees.findIndex((employee) => employee.id === employeeID)
+    
+    // If the employee exists
+    if (index != -1) {
+        employees[index] = updateEmployee
+        res.status(200).json({msg: "PUT Request Is Successful"})
+    }
 
-    employees.splice(employees.indexOf(existingEmployee),1,updateEmployee)
-    console.log(`PUT Request received at server.. ${new Date().toLocaleTimeString()}`)
-    res.json({msg: 'PUT Request is Success'});
+    res.status(404).json({errMsg: "Employee not found"})
 })
 
 //Delete request
