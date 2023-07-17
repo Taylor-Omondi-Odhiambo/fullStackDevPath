@@ -1,0 +1,10 @@
+git init - initialize repo
+git remote add origin https://github link - connect local repo to the repo on github
+git add . - to stage the changes
+git commit -m "init commit" - commit files to repo
+git push - upload local changes to remote repo
+git push origin <branchName> -upload local changes to branch
+git  pull -update local repo to be same as repo on git hub
+git -b newBranch - create a new branch text after the flag is the name of the branch
+git checkout - to leave a branch 
+git checkout branchName - to enter a branch
