@@ -1,8 +1,9 @@
 import express from 'express'
+import path from 'path'
 const router = express.Router()
 
 router.get('/',(req,res)=>{
-    res.send("This is the home page")
+    res.sendFile('C:\Users\taylo\Documents\FullStackWebDev\javaScript\AJAX\restAPI\views\index.html')
 })
 
 export default router
